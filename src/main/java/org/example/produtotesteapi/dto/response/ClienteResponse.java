@@ -1,4 +1,4 @@
-package org.example.produtotesteapi.dto;
+package org.example.produtotesteapi.dto.response;
 
 import org.example.produtotesteapi.enums.StatusCliente;
 import org.example.produtotesteapi.model.valueobjetct.Endereco;

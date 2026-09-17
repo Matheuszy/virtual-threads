@@ -1,4 +1,4 @@
-package org.example.produtotesteapi.dto;
+package org.example.produtotesteapi.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
