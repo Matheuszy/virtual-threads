@@ -114,6 +114,8 @@ public class ProdutoService {
                     "Produto sem estoque"
             );
         }
+
+        produtoRepositorie.reservar(id, quantidade);
     }
 
 }

@@ -46,12 +46,10 @@ public class ProdutoController {
         return service.updateProduct(id, request);
     }
 
-    @PostMapping("/{id}/reservar")
+    @PostMapping("/{id}/reservar/{quantidade}")
     public ResponseEntity<Void> reservar(
             @PathVariable Integer id, @PathVariable Integer quantidade) {
-
         service.reservarProduto(id, quantidade);
-
         return ResponseEntity.ok().build();
     }
 
