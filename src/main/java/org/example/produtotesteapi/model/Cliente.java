@@ -20,8 +20,11 @@ public class Cliente {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String password;
 
     @Column(nullable = false)
     private String telefone;
@@ -43,17 +46,17 @@ public class Cliente {
     public Cliente(String nome,
                    String cpf,
                    String email,
+                   String password,
                    String telefone,
-                   StatusCliente status,
-                   Endereco endereco,
-                   LocalDate cadastradoEm) {
+                   Endereco endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
+        this.password = password;
         this.telefone = telefone;
-        this.status = status;
+        this.status = StatusCliente.ATIVO;
         this.endereco = endereco;
-        this.cadastradoEm = cadastradoEm;
+        this.cadastradoEm = LocalDate.now();
     }
 
     public Long getId() {
