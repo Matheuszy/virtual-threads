@@ -5,14 +5,14 @@ import org.example.produtotesteapi.enums.StatusCliente;
 import org.example.produtotesteapi.model.valueobjetct.Endereco;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "clientes")
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
