@@ -1,8 +1,8 @@
 package org.example.produtotesteapi.controller;
 
 import jakarta.validation.Valid;
-import org.example.produtotesteapi.dto.ClienteRequest;
-import org.example.produtotesteapi.dto.ClienteResponse;
+import org.example.produtotesteapi.dto.request.ClienteRequest;
+import org.example.produtotesteapi.dto.response.ClienteResponse;
 import org.example.produtotesteapi.service.ClienteService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,8 @@
 package org.example.produtotesteapi.service;
 
 import jakarta.transaction.Transactional;
-import org.example.produtotesteapi.dto.ClienteRequest;
-import org.example.produtotesteapi.dto.ClienteResponse;
+import org.example.produtotesteapi.dto.request.ClienteRequest;
+import org.example.produtotesteapi.dto.response.ClienteResponse;
 import org.example.produtotesteapi.enums.StatusCliente;
 import org.example.produtotesteapi.mapper.ClienteMapper;
 import org.example.produtotesteapi.model.Cliente;

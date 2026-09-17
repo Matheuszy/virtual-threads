@@ -1,7 +1,7 @@
 package org.example.produtotesteapi.mapper;
 
-import org.example.produtotesteapi.dto.ClienteRequest;
-import org.example.produtotesteapi.dto.ClienteResponse;
+import org.example.produtotesteapi.dto.request.ClienteRequest;
+import org.example.produtotesteapi.dto.response.ClienteResponse;
 import org.example.produtotesteapi.model.Cliente;
 import org.springframework.stereotype.Component;
 

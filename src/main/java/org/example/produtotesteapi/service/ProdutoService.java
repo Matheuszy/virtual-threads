@@ -1,8 +1,8 @@
 package org.example.produtotesteapi.service;
 
 import jakarta.transaction.Transactional;
-import org.example.produtotesteapi.dto.ProdutoResponse;
-import org.example.produtotesteapi.dto.ProdutoRequest;
+import org.example.produtotesteapi.dto.response.ProdutoResponse;
+import org.example.produtotesteapi.dto.request.ProdutoRequest;
 import org.example.produtotesteapi.model.Produto;
 import org.example.produtotesteapi.repository.ProdutoRepositorie;
 import org.springframework.data.domain.Page;
