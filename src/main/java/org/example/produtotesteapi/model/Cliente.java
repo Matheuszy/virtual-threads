@@ -33,6 +33,9 @@ public class Cliente {
     @Column(nullable = false)
     private StatusCliente status;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private Carrinho carrinho;
+
     @Embedded
     @Column(nullable = false)
     private Endereco endereco;
