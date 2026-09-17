@@ -25,6 +25,7 @@ public class ProdutoService {
         return produtoRepositorie.findAll(pageable)
                 .map(produto ->
                         new ProdutoResponse(
+                                produto.getId(),
                                 produto.getNome(),
                                 produto.getPreco(),
                                 produto.getQuantidade()));
@@ -38,6 +39,7 @@ public class ProdutoService {
             produtoRepositorie.findById(id)
                 .map(produto ->
                         new ProdutoResponse(
+                                produto.getId(),
                                 produto.getNome(),
                                 produto.getPreco(),
                                 produto.getQuantidade()))
@@ -52,6 +54,7 @@ public class ProdutoService {
             produtoRepositorie.findByNome(nome)
                 .map(produto ->
                         new ProdutoResponse(
+                                produto.getId(),
                                 produto.getNome(),
                                 produto.getPreco(),
                                 produto.getQuantidade())));
@@ -63,6 +66,7 @@ public class ProdutoService {
         produtoRepositorie.save(newProduto);
         return ResponseEntity.status(201).body(
                 new ProdutoResponse(
+                        newProduto.getId(),
                         newProduto.getNome(),
                         newProduto.getPreco(),
                         newProduto.getQuantidade()));
@@ -81,6 +85,7 @@ public class ProdutoService {
         produtoRepositorie.save(produto);
         return ResponseEntity.ok(
                 new ProdutoResponse(
+                        produto.getId(),
                         produto.getNome(),
                         produto.getPreco(),
                         produto.getQuantidade()));
@@ -96,6 +101,19 @@ public class ProdutoService {
         }
         produtoRepositorie.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @Transactional
+    public void reservarProduto(Integer id, Integer quantidade) {
+
+        int alteracoes =
+                produtoRepositorie.reservar(id, quantidade);
+
+        if (alteracoes == 0) {
+            throw new RuntimeException(
+                    "Produto sem estoque"
+            );
+        }
     }
 
 }

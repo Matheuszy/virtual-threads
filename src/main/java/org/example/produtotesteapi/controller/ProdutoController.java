@@ -46,6 +46,15 @@ public class ProdutoController {
         return service.updateProduct(id, request);
     }
 
+    @PostMapping("/{id}/reservar")
+    public ResponseEntity<Void> reservar(
+            @PathVariable Integer id, @PathVariable Integer quantidade) {
+
+        service.reservarProduto(id, quantidade);
+
+        return ResponseEntity.ok().build();
+    }
+
     @DeleteMapping("/deletar/{id}")
     public ResponseEntity<Void> deletarProduto(@PathVariable Integer id) {
         return service.deleteProduct(id);
