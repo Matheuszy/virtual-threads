@@ -1,4 +1,4 @@
-package org.example.produtotesteapi.dto;
+package org.example.produtotesteapi.dto.response;
 
 import java.math.BigDecimal;
 

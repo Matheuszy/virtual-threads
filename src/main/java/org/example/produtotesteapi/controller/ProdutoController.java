@@ -1,7 +1,7 @@
 package org.example.produtotesteapi.controller;
 
-import org.example.produtotesteapi.dto.ProdutoResponse;
-import org.example.produtotesteapi.dto.ProdutoRequest;
+import org.example.produtotesteapi.dto.response.ProdutoResponse;
+import org.example.produtotesteapi.dto.request.ProdutoRequest;
 import org.example.produtotesteapi.service.ProdutoService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
