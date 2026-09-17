@@ -1,7 +1,7 @@
 package org.example.produtotesteapi.model.valueobjetct;
 
 import jakarta.persistence.Embeddable;
-import org.springframework.stereotype.Component;
+
 
 @Embeddable
 public class Endereco {

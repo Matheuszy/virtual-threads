@@ -2,7 +2,6 @@ package org.example.produtotesteapi.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.example.produtotesteapi.enums.StatusCliente;
 import org.example.produtotesteapi.model.valueobjetct.Endereco;
 
 public record ClienteRequest(
@@ -16,7 +15,7 @@ public record ClienteRequest(
         String email,
 
         @NotBlank(message = "A senha é obrigatória")
-        String password, // Adicionado pois a entidade exige
+        String password,
 
         @NotBlank(message = "O telefone é obrigatório")
         String telefone,
